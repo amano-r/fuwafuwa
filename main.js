@@ -47,7 +47,7 @@ function generateBody(){
     let p_styles = "background-color:#" + back_color[0] + back_color[1] + back_color[2] +
                  ";animation:moveVertical infinite " + getRandomNum(1,3) + "s -" + Math.floor(getRandomNum(0,3)) + "s " + bezier + " " + setDirection() + "," + 
                             "moveHorizontal infinite " + getRandomNum(1,3) + "s -" + Math.floor(getRandomNum(0,3)) + "s " + bezier + " " + setDirection() + ";";
-   let body = "<p style=\"" + p_styles + "\"></p>";
+   let body = "<p class=\"word\" style=\"" + p_styles + "\"></p>";
    return body;
 }
 
