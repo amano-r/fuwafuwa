@@ -42,16 +42,11 @@ function generateColor(start,end){
 }
 
 function generateBody(){
-    let word = String.fromCharCode(65 + Math.floor(25 * Math.random()));  //65~90
+    let word = String.fromCharCode(65 + Math.floor(25 * Math.random()));
     let back_color = generateColor(0,'f');
-    //let back_color = generateColor(3,6);
-    //let color = generateColor('b','f');
     let p_styles = "background-color:#" + back_color[0] + back_color[1] + back_color[2] +
                  ";animation:moveVertical infinite " + getRandomNum(1,3) + "s -" + Math.floor(getRandomNum(0,3)) + "s " + bezier + " " + setDirection() + "," + 
                             "moveHorizontal infinite " + getRandomNum(1,3) + "s -" + Math.floor(getRandomNum(0,3)) + "s " + bezier + " " + setDirection() + ";";
-    /*let span_styles = "color:#" + color[0] + color[1] + color[2];
-    let body = "<p style=\"" + p_styles + "\"><span class=\"word\" style\"" + span_styles + "\">" + word + "<\span></p>";
-    */
    let body = "<p style=\"" + p_styles + "\"></p>";
    return body;
 }
